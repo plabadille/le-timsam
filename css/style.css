@@ -3,10 +3,86 @@
   margin:0;
   padding:0;
 }
+html{
+  background: black;
+}
+
+
 /* ----------------------------------------------------------- */
 
+/* ORGA BLOC */
+/* global */
+body{
+  display: flex;
+  width:85%;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: auto;
+}
+  header{
+    width:100%;
+    background: #D1D1D1;
+    margin: auto;
+  }
+
+  #container {
+    flex: 1;
+    width:100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+    main{
+     order: 2;
+     flex-grow: 1;
+    }
+    #mainNav{
+      order: 1;
+    }
+
+  footer{
+    width:100%;
+    background: yellow;
+
+  }
+
+/* header */
+header img{
+  width: 100%;
+}
+h1#headerHidden{ 
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  height: 1px; 
+  margin: -1px; 
+  overflow: hidden; 
+  padding: 0; 
+  position: absolute; 
+  width: 1px; 
+}
+
+/* main */
+main{
+ display: flex;
+ flex-direction: row;
+ background: white;
+}
+  #contentMain{
+    order: 2;
+    flex-grow:1;
+    flex-basis: 85%;
+    padding: 3%;
+
+  }
+  #comAside{
+    order: 1;
+    flex-basis: 15%;
+    border-right: 1px solid #D1D1D1;
+    padding: 2%;
+  }
+
 /* MENU DEROULANT */
-.navigation {
+#mainNav .navigation {
   list-style: none;
   margin: 0;
   background: #D1D1D1;
@@ -14,18 +90,18 @@
   justify-content: space-around;
 }
 
-.navigation a {
+#mainNav .navigation a {
   text-decoration: none;
   display: block;
   padding: 20px 40px 20px 40px;
   color: #000;
 }
 
-.navigation a:hover {
+#mainNav .navigation a:hover {
   background: #FFFFFF;
 }
 
-.navigation ul{
+#mainNav .navigation ul{
   position:absolute;
   z-index: 1000;
   max-height:0;
@@ -34,40 +110,75 @@
   -webkit-transition: .8s all .3s;
   transition: .8s all .3s;
 }
-.navigation li:hover ul{
+#mainNav .navigation li:hover ul{
   max-height:15em;
   background: #D1D1D1;
   list-style: none;
   padding: 0;
 }
-.navigation li ul{
+#mainNav .navigation li ul{
   list-style: none;
   padding: 0;
 }
-.navigation li ul:last-child{
+#mainNav .navigation li ul:last-child{
   border-radius:0 0 8px 8px;
 }
 
 @media screen and (max-device-width: 600px) {
 /* Faire javascript et revoir css pour comptabilité mobile */
-  .navigation {
+  #mainNav .navigation {
     flex-flow: column wrap;
     padding: 0;
   }
 
-  .navigation a {
+  #mainNav .navigation a {
     text-align: center;
     padding: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  .navigation li:last-of-type a {
+  #mainNav .navigation li:last-of-type a {
     border-bottom: none;
   }
 
-  .navigation ul{
+  #mainNav .navigation ul{
     display:none;
   }
 }
 /* ---------------------------------------------------------- */
+/* paragraphe */
+#h1Normal{
+  text-align: center;
+  font-size: 2.2em;
+  color: red;
+}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 25px;
+  white-space: normal;
+  font-weight: bolder;
+  font-variant: normal;
+  text-transform: none;
+}
+.pNormal{
+  text-align: center;
+  color: #999;
+  font-size: 1em;
+  padding: 2%;
+  
+}
+.pBlack{
+  text-align: center;
+  color: #000000;
+  font-size: 1.05em;
+  padding: 2% 5% 2% 5%;
+}
+
+/* ---------------------------------------------------------- */
+/* images */
+.figureNormal img{
+  display: block;
+  margin: auto;
+  width: 50%;
+}
