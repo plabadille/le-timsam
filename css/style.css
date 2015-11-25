@@ -101,29 +101,30 @@ main{
   background: #FFFFFF;
 }
 
-#mainNav .navigation ul{
-  position:absolute;
-  z-index: 1000;
-  max-height:0;
-  overflow:hidden;
-  -moz-transition: .8s all .3s;
-  -webkit-transition: .8s all .3s;
-  transition: .8s all .3s;
+@media screen and (min-device-width: 601px) {
+  #mainNav .navigation ul{
+    position:absolute;
+    z-index: 1000;
+    max-height:0;
+    overflow:hidden;
+    -moz-transition: .8s all .3s;
+    -webkit-transition: .8s all .3s;
+    transition: .8s all .3s;
+  }
+  #mainNav .navigation li:hover ul{
+    max-height:15em;
+    background: #D1D1D1;
+    list-style: none;
+    padding: 0;
+  }
+  #mainNav .navigation li ul{
+    list-style: none;
+    padding: 0;
+  }
+  #mainNav .navigation li ul:last-child{
+    border-radius:0 0 8px 8px;
+  }
 }
-#mainNav .navigation li:hover ul{
-  max-height:15em;
-  background: #D1D1D1;
-  list-style: none;
-  padding: 0;
-}
-#mainNav .navigation li ul{
-  list-style: none;
-  padding: 0;
-}
-#mainNav .navigation li ul:last-child{
-  border-radius:0 0 8px 8px;
-}
-
 @media screen and (max-device-width: 600px) {
 /* Faire javascript et revoir css pour comptabilité mobile */
   #mainNav .navigation {
@@ -144,6 +145,11 @@ main{
 
   #mainNav .navigation ul{
     display:none;
+  }  
+  #mainNav .navigation ul li{
+    border-top: 0;
+    border-bottom: 0;
+    background: grey;
   }
 }
 /* ---------------------------------------------------------- */
