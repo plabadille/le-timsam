@@ -1,9 +1,10 @@
 <?php
 //a supr : cd ../../progra~2/wamp/www/timsam_git/le-timsam
-//git add -a
+//git add -A
 // git commit -a -m ""
 //git push
 $nav = file_get_contents('view/templates/nav.phtml');
+$actualite = file_get_contents('view/pages/actualite.html');
 $action = isset($_GET['action']) ? $_GET['action'] : 'home';
 
 //function

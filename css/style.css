@@ -9,12 +9,14 @@ html{
 
 
 /* ----------------------------------------------------------- */
-
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
 /* ORGA BLOC */
 /* global */
 body{
   display: flex;
   width:85%;
+  max-width:1200px;
   min-height: 100vh;
   flex-direction: column;
   margin: auto;
@@ -40,11 +42,12 @@ body{
       order: 1;
     }
 
-  footer{
+@media screen and (max-device-width: 600px) {
+  body{
     width:100%;
-    background: yellow;
-
   }
+}
+/* ----------------------------------------------------------- */
 
 /* header */
 header img{
@@ -60,6 +63,7 @@ h1#headerHidden{
   position: absolute; 
   width: 1px; 
 }
+/* ----------------------------------------------------------- */
 
 /* main */
 main{
@@ -79,8 +83,55 @@ main{
     flex-basis: 15%;
     border-right: 1px solid #D1D1D1;
     padding: 2%;
-  }
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 
+  }
+    #actualite{
+      border-bottom: 1px solid #D1D1D1;
+    }
+      #actualite #listeActualite li:last-child{
+        padding-bottom: 10px;
+      }
+      #titreActualite{
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+    .widget{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    .borderDown{
+      border-bottom: 1px solid #D1D1D1;
+      width:100%;
+    }
+
+@media screen and (max-device-width: 600px) {
+  #comAside{
+    display:none;
+  }
+}
+/* ---------------------------------------------------------- */
+
+/* Footer */
+footer{
+  width:100%;
+  background: #D1D1D1;
+  display:flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+@media screen and (max-device-width: 600px) {
+  footer{
+    background: #D1D1D1;
+  }
+}
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
 /* MENU DEROULANT */
 #mainNav .navigation {
   list-style: none;
@@ -125,8 +176,8 @@ main{
     border-radius:0 0 8px 8px;
   }
 }
+
 @media screen and (max-device-width: 600px) {
-/* Faire javascript et revoir css pour comptabilité mobile */
   #mainNav .navigation {
     flex-flow: column wrap;
     padding: 0;
@@ -134,7 +185,7 @@ main{
 
   #mainNav .navigation a {
     text-align: center;
-    padding: 10px;
+    padding: 2px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
@@ -152,6 +203,7 @@ main{
     background: grey;
   }
 }
+
 /* ---------------------------------------------------------- */
 /* paragraphe */
 #h1Normal{
@@ -172,8 +224,11 @@ p{
   color: #999;
   font-size: 1em;
   padding: 2%;
-  
 }
+footer .pNormal{
+  color:black;
+}
+
 .pBlack{
   text-align: center;
   color: #000000;
@@ -181,10 +236,43 @@ p{
   padding: 2% 5% 2% 5%;
 }
 
+@media screen and (max-device-width: 600px) {
+  #h1Normal{
+    font-size: 1.4em;
+  }
+  .pNormal{
+    font-size: 0.8em;
+    text-align: justify;
+  }
+  footer .pNormal{
+    order:2;
+    text-align: center;
+  }
+  .pBlack{
+    font-size: 0.85em;
+  }
+}
 /* ---------------------------------------------------------- */
 /* images */
 .figureNormal img{
   display: block;
   margin: auto;
   width: 50%;
+}
+
+#sociaux{
+  display:flex;
+  margin:auto;
+}
+.footerSocial{
+  width:75px;
+}
+
+@media screen and (max-device-width: 600px) {
+  .figureNormal img{
+    width: 100%;
+  }
+  .footerSocial{
+    order:1;
+  }
 }
