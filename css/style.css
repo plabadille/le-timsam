@@ -76,7 +76,6 @@ main{
     flex-grow:1;
     flex-basis: 85%;
     padding: 3%;
-
   }
   #comAside{
     order: 1;
@@ -211,6 +210,10 @@ footer{
   font-size: 2.2em;
   color: red;
 }
+.h2Normal{
+  text-align: center;
+  padding-top: 20px;
+}
 p{
   font-family: Arial, Helvetica, sans-serif;
   line-height: 25px;
@@ -228,17 +231,23 @@ p{
 footer .pNormal{
   color:black;
 }
-
 .pBlack{
   text-align: center;
   color: #000000;
   font-size: 1.05em;
   padding: 2% 5% 2% 5%;
 }
+.ulCentre{
+  text-align: center;
+  padding: 0 10px 0 10px;
+}
 
 @media screen and (max-device-width: 600px) {
   #h1Normal{
     font-size: 1.4em;
+  }
+  .h2Normal{
+    font-size: 1.1em;
   }
   .pNormal{
     font-size: 0.8em;
@@ -251,15 +260,43 @@ footer .pNormal{
   .pBlack{
     font-size: 0.85em;
   }
+  .ulCentre:last-child li:last-child{
+    padding-bottom: 10px;
+  }
 }
 /* ---------------------------------------------------------- */
 /* images */
 .figureNormal img{
   display: block;
   margin: auto;
-  width: 50%;
+  width: 60%;
 }
-
+  .capNormal{
+    font-size: 0.7em;
+    font-style: italic;
+    text-align: center;
+  }
+#imgConteneur{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin:auto;
+}
+  .figRestaurant{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+    .figRestaurant img{
+      margin:auto;
+    }
+    .figCredit{
+      font-size: 0.7em;
+      font-style: italic;
+      text-align: center;
+      max-width: 250px;
+    }
 #sociaux{
   display:flex;
   margin:auto;

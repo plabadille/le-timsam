@@ -21,13 +21,22 @@ function clean(node)
 }
 
 clean(document);
+	
+//script google Analytics
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-47890565-1', 'le-timsam.com');
+ga('send', 'pageview');
 
+//menu déroulant mobile:
 var ul1=document.querySelector('#mainNav .navigation li:nth-child(2) ul');
 var ul2=document.querySelector('#mainNav .navigation li:nth-child(3) ul');
 var ul3=document.querySelector('#mainNav .navigation li:nth-child(4) ul');
 
-var a2=document.querySelector('#mainNav .navigation li:nth-child(2) a');
-var a3=document.querySelector('#mainNav .navigation li:nth-child(3) a');
+var a2=document.querySelector('#mainNav .navigation > li:nth-child(2) a');
+var a3=document.querySelector('#mainNav .navigation > li:nth-child(3) a');
 var a4=document.querySelector('#mainNav .navigation > li:nth-child(4) a');
 
 menu();
