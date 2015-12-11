@@ -77,6 +77,32 @@ main{
     flex-basis: 85%;
     padding: 3%;
   }
+   #widgetResa iframe{
+    width: 50%;
+   }
+   #widgetCalendar{
+    display:block;
+    margin:auto;
+    width: 95%;
+   }
+   #widgetCalendarMobile{
+    display:none;
+    margin:auto;
+    width: 95%;
+   }
+   #widgetCarteFull{
+    display:block;
+    margin:auto;
+    width: 95%;
+   }
+   #widgetMiniMap{
+    border: 0;
+   }
+   .lecteurAudio{
+    display:block;
+    margin:auto;
+    margin-top: 15px;
+   }
 
   #comAside{
     order: 1;
@@ -112,6 +138,15 @@ main{
   #comAside{
     display:none;
   }
+  #widgetResa iframe{
+    width: 100%;
+   }
+   #widgetCalendar{
+    display: none;
+   }
+   #widgetCalendarMobile{
+    display:block;
+   }
 }
 /* ---------------------------------------------------------- */
 
@@ -133,7 +168,21 @@ footer{
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 /* MENU DEROULANT */
-#mainNav .navigation {
+#mainNav #navigationMobile{
+  display: none;
+  background: #D1D1D1;
+  list-style: none;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+}
+#mainNav #navigationMobile a {
+  text-decoration: none;
+  display: block;
+  padding: 15px 10% 15px 10%;
+  color: #000;
+}
+
+#mainNav #navigation {
   list-style: none;
   margin: 0;
   background: #D1D1D1;
@@ -141,19 +190,21 @@ footer{
   justify-content: space-around;
 }
 
-#mainNav .navigation a {
+#mainNav #navigation a {
   text-decoration: none;
   display: block;
-  padding: 20px 40px 20px 40px;
+  padding: 20px 10% 20px 10%;
   color: #000;
 }
-
-#mainNav .navigation a:hover {
+#mainNav #navigation li{
+  padding-right: 4%;
+}
+#mainNav #navigation li:hover {
   background: #FFFFFF;
 }
 
 @media screen and (min-device-width: 601px) {
-  #mainNav .navigation ul{
+  #mainNav #navigation ul{
     position:absolute;
     z-index: 1000;
     max-height:0;
@@ -162,42 +213,44 @@ footer{
     -webkit-transition: .8s all .3s;
     transition: .8s all .3s;
   }
-  #mainNav .navigation li:hover ul{
+  #mainNav #navigation li:hover ul{
     max-height:15em;
     background: #D1D1D1;
     list-style: none;
     padding: 0;
   }
-  #mainNav .navigation li ul{
+  #mainNav #navigation li ul{
     list-style: none;
     padding: 0;
   }
-  #mainNav .navigation li ul:last-child{
+  #mainNav #navigation li ul:last-child{
     border-radius:0 0 8px 8px;
   }
 }
 
 @media screen and (max-device-width: 600px) {
-  #mainNav .navigation {
+  #mainNav #navigation {
     flex-flow: column wrap;
     padding: 0;
   }
-
-  #mainNav .navigation a {
+  #mainNav #navigation li{
+  padding-right: 0;
+  }
+  #mainNav #navigation a {
     text-align: center;
     padding: 2px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
-  #mainNav .navigation li:last-of-type a {
+  #mainNav #navigation li:last-of-type a {
     border-bottom: none;
   }
 
-  #mainNav .navigation ul{
+  #mainNav #navigation ul{
     display:none;
   }  
-  #mainNav .navigation ul li{
+  #mainNav #navigation ul li{
     border-top: 0;
     border-bottom: 0;
     background: grey;
@@ -206,6 +259,23 @@ footer{
 
 /* ---------------------------------------------------------- */
 /* paragraphe */
+/* Webfont */
+@font-face {
+    font-family:'luxi_sansregular';
+    src: url('luxisr-webfont.eot');
+    src: url('luxisr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('luxisr-webfont.woff') format('woff'),
+         url('luxisr-webfont.ttf') format('truetype'),
+         url('luxisr-webfont.svg#luxi_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+h1{
+  font-family:'luxi_sansregular';
+}
+h2{
+  font-family:'luxi_sansregular';
+}
 #h1Normal{
   text-align: center;
   font-size: 2.2em;
@@ -219,12 +289,18 @@ footer{
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.h2Galerie{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-basis: 100%;
 }  
 p{
+  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 25px;
   white-space: normal;
-  font-weight: bolder;
   font-variant: normal;
   text-transform: none;
 }
@@ -233,6 +309,12 @@ p{
   color: #999;
   font-size: 1em;
   padding: 2%;
+}
+.pJustifier{
+  text-align: justify;
+  color: #999;
+  font-size: 1em;
+  padding: 0 2% 2% 2%;
 }
 footer .pNormal{
   color:black;
@@ -252,6 +334,14 @@ footer .pNormal{
   text-align: center;
   padding: 0 10px 0 10px;
 }
+.ulEvent{
+  text-align: center;
+  padding: 5px 10px 0 10px;
+  list-style-type: decimal;
+}
+#ulGauche ul li{
+  margin-left: 5%;
+}
 
 @media screen and (max-device-width: 600px) {
   #h1Normal{
@@ -263,9 +353,15 @@ footer .pNormal{
   .h2Produits{
     font-size: 1.1em;
   }
+  .h2Galerie{
+    font-size: 1.1em;
+  }
   .pNormal{
     font-size: 0.8em;
     text-align: justify;
+  }
+  .pJustifier{
+    font-size: 0.8em;
   }
   footer .pNormal{
     order:2;
@@ -277,6 +373,15 @@ footer .pNormal{
   .ulCentre:last-child li:last-child{
     padding-bottom: 10px;
   }
+  .ulEvent:last-child li:last-child{
+    padding-bottom: 10px;
+  }
+  #ulGauche li{
+    margin-left: 5%;
+  }
+  #ulGauche ul li{
+    margin-left: 15%;
+  } 
 }
 /* ---------------------------------------------------------- */
 /* images */
@@ -284,6 +389,16 @@ footer .pNormal{
   display: block;
   margin: auto;
   width: 60%;
+}
+.figurePrez img{
+  width: 50%;
+  float: left;
+  padding-right: 5%;
+}
+.figureFull img{
+  display: block;
+  margin: auto;
+  width: 95%;
 }
   .capNormal{
     font-size: 0.7em;
@@ -313,6 +428,12 @@ footer .pNormal{
     border-bottom: 1px solid #D1D1D1;
     margin-bottom: 10px;
   }
+  .figurePrez img{
+    padding-bottom: 10px;
+    display:block;
+    margin:auto;
+    width:100%;
+  }
 }
 #imgConteneur{
   display: flex;
@@ -320,11 +441,15 @@ footer .pNormal{
   flex-wrap: wrap;
   justify-content: center;
   margin:auto;
+  max-width: 650px;
 }
   .figRestaurant{
     display: flex;
     flex-direction: column;
     margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-basis:1;
   }
     .figRestaurant img{
       margin:auto;
@@ -334,6 +459,16 @@ footer .pNormal{
       font-style: italic;
       text-align: center;
       max-width: 250px;
+    }
+    .figCreditGalerie{
+      display: none;
+    }
+    .figRestaurant:hover .figCreditGalerie{
+      display: flex;
+      font-size: 0.7em;
+      font-style: italic;
+      text-align: center;
+      max-width: 175px;
     }
     
 #sociaux{

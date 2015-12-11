@@ -31,13 +31,18 @@ ga('create', 'UA-47890565-1', 'le-timsam.com');
 ga('send', 'pageview');
 
 //menu déroulant mobile:
-var ul1=document.querySelector('#mainNav .navigation li:nth-child(2) ul');
-var ul2=document.querySelector('#mainNav .navigation li:nth-child(3) ul');
-var ul3=document.querySelector('#mainNav .navigation li:nth-child(4) ul');
+var ul=document.querySelector('#mainNav #navigation');
+var declencheurMobile=document.querySelector('#mainNav #navigationMobile a');
+var mobile=document.querySelector('#mainNav #navigationMobile');
 
-var a2=document.querySelector('#mainNav .navigation > li:nth-child(2) a');
-var a3=document.querySelector('#mainNav .navigation > li:nth-child(3) a');
-var a4=document.querySelector('#mainNav .navigation > li:nth-child(4) a');
+
+var ul1=document.querySelector('#mainNav #navigation li:nth-child(2) ul');
+var ul2=document.querySelector('#mainNav #navigation li:nth-child(3) ul');
+var ul3=document.querySelector('#mainNav #navigation li:nth-child(4) ul');
+
+var a2=document.querySelector('#mainNav #navigation > li:nth-child(2) a');
+var a3=document.querySelector('#mainNav #navigation > li:nth-child(3) a');
+var a4=document.querySelector('#mainNav #navigation > li:nth-child(4) a');
 
 menu();
 window.addEventListener("resize", menu);
@@ -51,32 +56,55 @@ function menu(){
 }
 
 function normalRez(){
+	declencheurMobile.textContent = "Menu  ";
 	a2.textContent = "Services";
 	a3.textContent = "Produits";
 	a4.textContent = "Animations";
+	declencheurMobile.removeEventListener("click", derouler);
 	a2.removeEventListener("click", derouler1, false);
 	a3.removeEventListener('click', derouler2, false);
 	a4.removeEventListener('click', derouler3, false);
+	declencheurMobile.removeEventListener("click", renrouler);
 	a2.removeEventListener("click", renrouler1, false);
 	a3.removeEventListener('click', renrouler2, false);
 	a4.removeEventListener('click', renrouler3, false);
+	mobile.style.display = "none";
+	ul.style.display = "flex";
 	ul1.style.display = "initial";
 	ul2.style.display = "initial";
 	ul3.style.display = "initial";
 }
 
 function basseRez(){
+	ul.style.display = "none";
 	ul1.style.display = "none";
 	ul2.style.display = "none";
 	ul3.style.display = "none";
-
+	mobile.style.display = "flex";
+	declencheurMobile.textContent = "Menu  ▼";
 	a2.textContent = "Services ▼";
 	a3.textContent = "Produits ▼";
 	a4.textContent = "Animations ▼";
 
+	declencheurMobile.addEventListener("click", derouler, false);
 	a2.addEventListener("click", derouler1, false);
 	a3.addEventListener('click', derouler2, false);
 	a4.addEventListener('click', derouler3, false);
+}
+
+function derouler(ev){
+	ev.preventDefault();
+	ul.style.display = "flex";
+	declencheurMobile.textContent = "Menu  ▲";
+	declencheurMobile.addEventListener('click', renrouler, false);
+	return;
+}
+function renrouler(ev){
+	ev.preventDefault();
+	ul.style.display = "none";
+	declencheurMobile.removeEventListener("click", renrouler);
+	/*a2.textContent = "Services ▼";*/
+	return;
 }
 
 function derouler1(ev){

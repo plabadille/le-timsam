@@ -1,8 +1,4 @@
 <?php
-//a supr : cd ../../progra~2/wamp/www/timsam_git/le-timsam
-//git add -A
-// git commit -a -m ""
-//git push
 $nav = file_get_contents('view/templates/nav.phtml');
 $actualite = file_get_contents('view/pages/actualite.html');
 $action = isset($_GET['action']) ? $_GET['action'] : 'home';
@@ -52,6 +48,35 @@ switch ($action) {
 		$title = 'Nos animations';
 		$main = file_get_contents('view/pages/event.html');
 		break;
+			//uniquement accessible via event.html
+			case 'article1':
+			$title = 'Exposition Marie Hamel';
+			$main = file_get_contents('view/pages/articles/1_mariehamel.html');
+			break;
+			case 'article2':
+			$title = 'Exposition Jean-Louis Patrice';
+			$main = file_get_contents('view/pages/articles/2_jlpatrice.html');
+			break;
+			case 'article3':
+			$title = 'Dîner-concert Charlie Larigot';
+			$main = file_get_contents('view/pages/articles/3_charlielarigot.html');
+			break;
+			case 'article4':
+			$title = 'Exposition Cécile Dalnoky';
+			$main = file_get_contents('view/pages/articles/4_ceciledalnoky.html');
+			break;
+			case 'article5':
+			$title = 'Exposition Frédéric Filoche';
+			$main = file_get_contents('view/pages/articles/5_fredericfiloche.html');
+			break;
+			case 'article6':
+			$title = 'Exposition Zonk';
+			$main = file_get_contents('view/pages/articles/6_zonk.html');
+			break;
+			case 'article7':
+			$title = 'Animation culturelle';
+			$main = file_get_contents('view/pages/articles/7_animculturelle.html');
+			break;
 		//sous-onglet
 		case 'galerie':
 		$title = 'La galerie';
