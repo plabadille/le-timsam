@@ -103,6 +103,21 @@ main{
     margin:auto;
     margin-top: 15px;
    }
+   #boutonReserver{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 12px 15%;
+    border: 2px solid red;
+    border-radius: 7px;
+    text-align: center;
+   }
+    #boutonReserver a{
+      color: red;
+      font-weight: bold;
+    }
+    #boutonReserverMobile{
+      display:none;
+    }
 
   #comAside{
     order: 1;
@@ -147,6 +162,21 @@ main{
    #widgetCalendarMobile{
     display:block;
    }
+   #boutonReserverMobile{
+    display:block;
+    width:50%;
+    margin:auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 2px solid red;
+    border-radius: 7px;
+    text-align: center;
+   }
+    #boutonReserverMobile a{
+      color: red;
+      font-weight: bold;
+    }
 }
 /* ---------------------------------------------------------- */
 
@@ -188,16 +218,20 @@ footer{
   background: #D1D1D1;
   display: flex;
   justify-content: space-around;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-bottom: 4px solid #D1D1D1;
 }
 
 #mainNav #navigation a {
   text-decoration: none;
   display: block;
-  padding: 20px 10% 20px 10%;
+  padding: 20px 0 20px 0;
   color: #000;
+  text-align: center;
 }
 #mainNav #navigation li{
-  padding-right: 4%;
+  flex: 1;
 }
 #mainNav #navigation li:hover {
   background: #FFFFFF;
@@ -206,6 +240,7 @@ footer{
 @media screen and (min-device-width: 601px) {
   #mainNav #navigation ul{
     position:absolute;
+    width:15%;
     z-index: 1000;
     max-height:0;
     overflow:hidden;
@@ -214,11 +249,13 @@ footer{
     transition: .8s all .3s;
   }
   #mainNav #navigation li:hover ul{
+    justify-content: space-around;
     max-height:15em;
     background: #D1D1D1;
     list-style: none;
-    padding: 0;
+    width:15%;
   }
+
   #mainNav #navigation li ul{
     list-style: none;
     padding: 0;
@@ -306,6 +343,12 @@ p{
 }
 .pNormal{
   text-align: center;
+  color: #999;
+  font-size: 1em;
+  padding: 2%;
+}
+.pNormalJustifier{
+  text-align: justify;
   color: #999;
   font-size: 1em;
   padding: 2%;
