@@ -1,0 +1,8 @@
+Chartre graphique:
+
+h1: #D91629 
+h2: #ED8E4A
+p: #057162
+border: #D1D1D1
+survolmenu: #56C63E
+aMenu: #157A00
