@@ -54,6 +54,10 @@ switch ($action) {
 			$title = 'Animation culturelle';
 			$main = file_get_contents('view/pages/articles/7_animculturelle.html');
 			break;
+			case 'article9':
+			$title = 'Conférence : Secret d\'un chef dans la nature';
+			$main = file_get_contents('view/pages/articles/9_secretDunChef.html');
+			break;
 		
 	case 'carte':
 		$title = 'Carte et réservation en ligne';

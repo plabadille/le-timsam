@@ -79,6 +79,7 @@ main{
   }
    #widgetResa iframe{
     width: 50%;
+    margin-bottom: 10px;
    }
    #widgetCalendar{
     display:block;
