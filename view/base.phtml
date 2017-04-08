@@ -1,27 +1,13 @@
 <?php include 'templates/head.phtml' ?>
 <body>
-	<header>
+	<div id="c-base__wrapper">
 		<?php include 'templates/header.phtml' ?>
-	</header>
-	<div id="container">
-		<main>
-			<section id="contentMain">
-				<?=$main?>
-			</section>
-			<aside id="comAside">
-				<?php include 'view/templates/aside.phtml' ?>
-			</aside>
-		</main>
-		<nav id="mainNav">
-			<?=$nav?>
-		</nav>
+		<?php include 'templates/main.phtml' ?>
+		<?php include 'templates/nav.phtml' ?>
+		<?php include 'templates/footer.phtml' ?>
+		
+		<script src="js/lightbox-2.7.1/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script src="js/lightbox-2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 	</div>
-	<footer>
-		<?php include 'view/templates/footer.phtml' ?>
-	</footer>
-	
-	<script type="text/javascript" src="js/script.js"></script>
-	<script src="js/lightbox-2.7.1/js/jquery-1.11.0.min.js" type="text/javascript"></script>
-	<script src="js/lightbox-2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 </body>
 </html>

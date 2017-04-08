@@ -1,0 +1,34 @@
+#c-footer__legal{
+
+}
+.c-footer__legal-text{
+
+}
+
+#c-footer__socials{
+
+}
+.c-footer__socials-link{
+
+}
+.c-footer__socials-img{
+    width: 70px;
+}
+
+@media all and (max-width: 1280px) {
+   #sitelock_shield_logo{
+        display: none;
+    }
+}
+
+@media all and (min-width: 980px) {
+    .c-footer__socials-img{
+        width: 100px;
+    }
+}
+
+@media all and (min-width: 1920px) {
+    .c-footer__socials-img{
+        width: 120px;
+    }
+}

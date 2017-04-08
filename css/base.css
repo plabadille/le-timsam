@@ -1,0 +1,113 @@
+#c-base__wrapper{
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    overflow:hidden;
+    background-color: #e6e6e6;
+}
+
+#c-base__header{
+    order: 1;
+    flex: 1;
+    background-image: url("../img/accueil/banniere_mini.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height:17.29vw;
+}
+
+#c-base__nav{
+    order: 2;
+    background-color:  #bfbfbf;
+    box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.15);
+    padding: 5px;
+}
+
+#c-base__main{
+    order: 3;
+    padding: 5px;
+}
+
+#c-base__footer{
+    order: 4;
+    background-color:  #bfbfbf;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.15);
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+}   
+
+
+/* VW AND vh fix for apple mobile device */
+/* trick from pburtchaell */
+/* https://gist.github.com/pburtchaell/e702f441ba9b3f76f587 */
+
+/** 
+ * iPad with portrait orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  #c-base__header {
+    min-height: calc(768px*0.1729);
+  }
+  #c-base__wrapper{
+    min-height: 1024px;
+  }
+}
+
+/** 
+ * iPad with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  #c-base__header {
+    max-height: calc(1024px*0.1729);
+  }
+  #c-base__wrapper{
+    min-height: 1024px;
+  }
+}
+
+/** 
+ * iPad pro with portrait orientation.
+ */
+@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait){
+  #c-base__header {
+    max-height: calc(1024px*0.1729);
+  }
+  #c-base__wrapper{
+    min-height: 1366px;
+  }
+}
+
+/** 
+ * iPad pro with landscape orientation.
+ */
+@media all and (device-width: 1366px) and (device-height: 1024px) and (orientation:landscape){
+  #c-base__header {
+    min-height: calc(1366px*0.1729);
+  }
+  #c-base__wrapper{
+    min-height: 1024px;
+  }
+}
+
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+@media screen and (device-aspect-ratio: 40/71) and (orientation:portrait) {
+  #c-base__header {
+    min-height: calc(320px*0.1729);
+  }
+  #c-base__wrapper{
+    min-height: 500px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 40/71) and (orientation:landscape) {
+  #c-base__header {
+    min-height: calc(500px*0.1729);
+  }
+  #c-base__wrapper{
+    min-height: 500px;
+  }
+}
