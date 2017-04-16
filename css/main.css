@@ -33,11 +33,6 @@
     }
 }
 
-
-.c-main__article{
-
-}
-
 .c-main__figure{
     display: block;
     margin: 10px auto;
@@ -84,6 +79,8 @@
 .c-main__service-head-item{
    padding: 10px 0;
    text-align: center;
+   font-weight: normal;
+   font-family: 'luxi_sansregular';
 }
 .c-main__service-schedules-item{
     padding: 5px 0;

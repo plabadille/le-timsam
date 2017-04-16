@@ -44,7 +44,11 @@ p{
 }
 a{
     font-size: medium;
-    text-decoration: none;
+    color: rgb(21, 122, 0);
+    text-decoration: underline;
+}
+a:hover {
+    color: #D91629;
 }
 @media all and (min-width: 550px) {
     h1{

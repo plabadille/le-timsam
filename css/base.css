@@ -16,6 +16,13 @@
     min-height:17.29vw;
 }
 
+@media all and (max-width: 500px) {
+    #c-base__header{
+        min-height: 22vw;
+        background-size: 100% 100%;
+    }
+}
+
 #c-base__nav{
     order: 2;
     background-color:  #bfbfbf;
