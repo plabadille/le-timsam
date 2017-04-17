@@ -1,0 +1,103 @@
+@media all and (min-width: 750px) {
+    #c-avis__section {
+        display: block;
+        max-width: 750px;
+        margin: auto;
+    }
+}
+
+@media all and (min-width: 1280px) {
+    #c-avis__section {
+        display: block;
+        max-width: 1280px;
+        margin: auto;
+    }
+}
+
+#c-avis__reviews-inside {
+    width: 95%;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    min-height:1300px;
+    background-color: white;
+    border: 2px solid #D91629;
+    border-radius: 7px;
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,0.15);
+}
+
+#c-avis__exteriors {
+}
+#c-avis__exteriors-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 700px;
+    margin: auto;
+}
+.c-avis__exterior-item {
+    margin: 5px auto;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+#c-avis__press {
+}
+.c-avis__press-link {
+    margin: 10px auto;
+    width: 200px;
+    display: block;
+}
+.c-avis__press-link:first-of-type {
+    margin-top: 30px;
+}
+.c-avis__press-logo {
+    width: 200px;
+}
+
+@media all and (min-width: 750px) {
+    .c-avis__press-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: center;
+        max-width: 500px;
+        margin: auto;
+    }
+    .c-avis__press-link {
+        align-self: center;
+    }
+}
+
+@media all and (min-width: 1280px) {
+    #c-avis__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #c-avis__exteriors {
+        border-right: 2px solid #D91629;
+    }
+
+    #c-avis__exteriors, #c-avis__press {
+        max-width: 500px;
+        padding: 15px;
+    }
+
+    .c-avis__press-list, #c-avis__exteriors-list {
+        border-top: 2px solid #D91629;
+        margin-top: 20px;
+        padding-top: 30px;
+    }
+
+    #c-avis__reviews {
+        margin-top: 40px;
+    }
+}

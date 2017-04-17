@@ -141,8 +141,21 @@ a:hover {
     border-radius: 15%;
 }
 
+.horizontal_separator_mobile{
+    width: 85%;
+    display: block;
+    margin: 40px auto;
+    border-bottom: 2px solid #D91629;
+    border-radius: 15%;
+}
+
 @media all and (max-width: 1280px) {
     .horizontal_separator{
+        display: none;
+    }
+}
+@media all and (min-width: 1280px) {
+    .horizontal_separator_mobile{
         display: none;
     }
 }
