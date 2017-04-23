@@ -1,0 +1,8 @@
+<?php if (isset($breadcrumb)) { ?>
+<div id="c-base__breadcrumb">
+    <p class="c-base__breadcrumb-items">
+        <?php foreach ($breadcrumb as $key => $value) { ?>   
+        <a class="c-base__breadcrumb-link" href="<?= $value[1] ?>" title="<?= $value[0] ?>"><?=$value[0]?></a> > <?php } ?><?=$current_page?>
+    </p>
+</div>
+<?php } ?>
