@@ -1,0 +1,45 @@
+@media all and (min-width: 750px) {
+    #c-carte__section {
+        display: block;
+        max-width: 750px;
+        margin: auto;
+    }
+}
+
+@media all and (min-width: 1280px) {
+    #c-carte__section {
+        display: block;
+        max-width: 1280px;
+        margin: auto;
+    }
+}
+
+#c-carte__section {
+
+}
+
+.c-carte__article {
+
+}
+
+.c-carte__texte {
+
+}
+
+.c-carte__widget {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+#c-carte__booking-iframe {
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    height: 500px;
+}
+#c-carte__carte-iframe {
+    border: 0;
+    width: 95%;
+    max-width: 650px;
+    height: 800px;
+}
