@@ -9,21 +9,13 @@
 @media all and (min-width: 1280px) {
     #c-carte__section {
         display: block;
-        max-width: 1280px;
+        max-width: 1000px;
         margin: auto;
     }
-}
 
-#c-carte__section {
-
-}
-
-.c-carte__article {
-
-}
-
-.c-carte__texte {
-
+    .c-carte__article {
+        margin-top: 40px;
+    }
 }
 
 .c-carte__widget {

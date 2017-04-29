@@ -1,7 +1,7 @@
 #c-base__wrapper{
     display: flex;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     flex-direction: column;
     overflow:hidden;
     background-color: #e6e6e6;
@@ -11,9 +11,9 @@
     order: 1;
     flex: 1;
     background-image: url("../img/accueil/banniere_mini.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    min-height:17.29vw;
+    min-height:17.1vw;
 }
 
 @media all and (max-width: 500px) {
