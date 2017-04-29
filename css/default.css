@@ -131,6 +131,31 @@ a:hover {
     background-repeat: no-repeat;
     background-size: contain;
 }
+.icon-facebook{
+    background-image: url(../img/picto/facebook_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.icon-google-plus{
+    background-image: url(../img/picto/google-plus_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.icon-website{
+    background-image: url(../img/picto/siteweb_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.icon-tripadvisor{
+    background-image: url(../img/picto/tripadvisor_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.icon-twitter{
+    background-image: url(../img/picto/twitter_icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
 /* Bloc separator */
 .horizontal_separator{
