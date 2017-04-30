@@ -109,6 +109,11 @@ switch ($action) {
         $current_page = " L'exposition de Céline Azorin";
         $main = file_get_contents('view/pages/articles/21_expoCecileAzorin.html');
         break;
+    case 'article22':
+        $title = 'L\'exposition de Sista Jahia';
+        $current_page = " L'exposition de Sista Jahia";
+        $main = file_get_contents('view/pages/articles/22_expoSistaJahia.html');
+        break;
 }
 
 if (isset($_GET['action']) && $_GET['action'] != 'event') {
