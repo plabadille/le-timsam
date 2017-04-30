@@ -22,6 +22,10 @@
 .c-article__subtitle {
 
 }
+.c-article__category {
+    margin-top: 20px;
+    text-align: center;
+}
 @media all and (min-width: 1280px) {
     .c-article__subtitle {
         margin-top: 40px;
