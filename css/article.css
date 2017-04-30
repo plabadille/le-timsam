@@ -15,12 +15,9 @@
 }
 
 
-.c-article__text {
-
-}
-
-.c-article__subtitle {
-
+.c-article__text:last-child {
+    margin-top: 30px;
+    color: #057162;
 }
 .c-article__category {
     margin-top: 20px;
@@ -46,9 +43,6 @@
     text-align: left;
     font-weight: 600;
     margin-bottom: 10px;
-}
-.c-article__list-items {
-
 }
 .c-article__list-item {
     margin-left: 30px;
@@ -155,6 +149,7 @@
     background-color: #D91629;
     text-align: center;
     font-weight: 600;
+    color: white;
 }
 .c-article__person-pro {
     text-align: center;
@@ -164,9 +159,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-.c-article__person-contact-link {
-
 }
 .c-article__person-contact-icon {
     display: block;

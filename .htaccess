@@ -1,0 +1,59 @@
+RewriteEngine On
+
+#REDIRECTION DES ANCIENNES PAGES
+RewriteCond %{QUERY_STRING} action=restaurant$
+RewriteRule ^index\.php$ /service.php? [L,R=301]
+
+RewriteCond %{QUERY_STRING} action=produits$
+RewriteRule ^index\.php$ /avis.php? [L,R=301]
+
+RewriteCond %{QUERY_STRING} action=event$
+RewriteRule ^index\.php$ /evenement.php? [L,R=301]
+
+RewriteCond %{QUERY_STRING} action=carte$
+RewriteRule ^index\.php$ /reservation.php? [L,R=301]
+
+#REDIRECTION DES ANCIENS ARTICLES
+RewriteCond %{QUERY_STRING} action=article1$
+RewriteRule ^index\.php$ /articles/exposition-marie-hamel? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article2$
+RewriteRule ^index\.php$ /articles/exposition-jean-louis-patrice? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article3$
+RewriteRule ^index\.php$ /articles/diner-concert-charlie-larigot? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article4$
+RewriteRule ^index\.php$ /articles/exposition-cecile-dalnoky? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article5$
+RewriteRule ^index\.php$ /articles/exposition-frederic-filoche? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article6$
+RewriteRule ^index\.php$ /articles/exposition-zonk? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article7$
+RewriteRule ^index\.php$ /articles/animation-culturelle? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article9$
+RewriteRule ^index\.php$ /articles/conference-secret-d-un-chef-dans-la-nature? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article10$
+RewriteRule ^index\.php$ /articles/animation-culturelle-2? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article11$
+RewriteRule ^index\.php$ /articles/soiree-speciale-a-la-table-du-chef? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article12$
+RewriteRule ^index\.php$ /articles/conference-secret-d-un-chef-dans-la-nature-2? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article13$
+RewriteRule ^index\.php$ /articles/retour-soiree-a-la-table-du-chef-1? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article14$
+RewriteRule ^index\.php$ /articles/soiree-speciale-a-la-table-du-chef-2? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article15$
+RewriteRule ^index\.php$ /articles/retour-soiree-a-la-table-du-chef-2? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article16$
+RewriteRule ^index\.php$ /articles/retour-soiree-a-la-table-du-chef-3? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article17$
+RewriteRule ^index\.php$ /articles/retour-soiree-a-la-table-du-chef-4? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article18$
+RewriteRule ^index\.php$ /articles/retour-soiree-a-la-table-du-chef-5? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article19$
+RewriteRule ^index\.php$ /articles/animation-culturelle-3? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article20$
+RewriteRule ^index\.php$ /articles/retour-soiree-a-la-table-du-chef-6? [L,R=301]
+RewriteCond %{QUERY_STRING} action=article21$
+RewriteRule ^index\.php$ /articles/exposition-celine-azorin? [L,R=301]
+
+#REECRITURE DES URLS DES ARTICLES
+RewriteRule ^articles/([A-Za-z0-9-]+)/?$ evenement.php?articles=$1 [NC]
