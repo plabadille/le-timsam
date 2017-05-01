@@ -62,7 +62,7 @@
 }
 @media all and (min-width: 1280px) {
     .c-article__images {
-        border: 2px solid #D91629;
+        border: 2px solid #ae0817;
         border-radius: 7px;
         box-shadow: 0 4px 2px -2px rgba(0,0,0,0.15);
     }
@@ -136,7 +136,7 @@
 .c-article__person {
     max-width: 200px;
     margin: 20px auto;
-    border: 2px solid #D91629;
+    border: 2px solid #ae0817;
     border-radius: 7px;
     box-shadow: 0 4px 2px -2px rgba(0,0,0,0.15);
 }
@@ -146,7 +146,7 @@
     } 
 }
 .c-article__person-name {
-    background-color: #D91629;
+    background-color: #ae0817;
     text-align: center;
     font-weight: 600;
     color: white;
