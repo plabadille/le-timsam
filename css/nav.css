@@ -32,8 +32,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: rgb(21, 122, 0);
+    /* color: #7ca200; */ /* yellow-green */
+    color: #1eac01; /* between green */
+    /* color: #157a00; */ /* dark-green */
     font-size: x-small;
+    text-decoration: none;
     padding: 0 8px;
 }
 
