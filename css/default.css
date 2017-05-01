@@ -17,7 +17,8 @@
 h1{
     font-family:'luxi_sansregular';
     font-size: x-large;
-    color: #D91629;
+    /* color: #D91629; */
+    color: #ae0817;
     padding:0;
     margin:0 0 15px 0;
     text-align: center;
@@ -25,7 +26,8 @@ h1{
 h2{
     font-family:'luxi_sansregular';
     font-size:x-large;
-    color: #D91629;
+    /* color: #D91629; */
+    color: #ae0817;
     padding:0;
     margin:10px;
     text-align: center;
@@ -48,7 +50,8 @@ a{
     text-decoration: underline;
 }
 a:hover {
-    color: #D91629;
+    /* color: #D91629; */
+    color: #ae0817;
 }
 @media all and (min-width: 550px) {
     h1{
