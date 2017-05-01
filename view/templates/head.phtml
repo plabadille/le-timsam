@@ -25,8 +25,19 @@
 	<meta property="og:title" content="<?=$og_title?>" />
 	<meta property="og:description" content="<?=$og_description?>" />
 	<meta property="og:image" content="<?=$og_image?>" />
-	<?php } ?>
-
+	<?php } else { 
+		if( isset($_SERVER['HTTPS'] ) ) {
+		    $url_domain = "https://" . $_SERVER['HTTP_HOST'];
+		} else {
+		    $url_domain = "http://" . $_SERVER['HTTP_HOST'];
+		}
+		$current_uri = $url_domain . $_SERVER['REQUEST_URI'];
+	?>
+    <meta property="og:url" content="<?=$current_uri?>" />
+	<meta property="og:title" content="<?=$title?>" />
+	<meta property="og:description" content="Le Timsam est un restaurant de spécialités du Sud-Est asiatique proposant des plats issus de recettes traditionnelles faits maison à base de produits frais. Le restaurant vous proposes des spécialités laosiennes, vietnamiennes, thaïlandaises..." />
+	<meta property="og:image" content="<?=$url_domain?>/img/clip_image002.jpg" />
+    <?php } ?>
 	
 	<!-- Vendor CSS -->
 	<link rel="stylesheet" href="/css/vendor/normalize.css">
