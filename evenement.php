@@ -112,6 +112,10 @@ switch ($action) {
         $title = 'L\'exposition de Sista Jahia';    
         $current_page = " L'exposition de Sista Jahia";
         $main = file_get_contents('view/pages/articles/22_expoSistaJahia.html');
+        $og_url = $_SERVER['HTTP_HOST'] . "/articles/" . $action;
+        $og_title = $title;
+        $og_description = "Nous exposons en ce moment l'artiste Sista Jahia. Nous vous invitons à découvrir son travail très personnel, des tableaux aux influences très pop, colorés et géométriques ! Chaque tableau et uniques et a son histoire, il ne tient qu'à vous de venir les découvrir tout en mangeant votre plat favoris.";
+        $og_image =  $_SERVER['HTTP_HOST'] . "/img/galerie/event/article/sista_jahia/1_mini.jpg";
         break;
     default:
         $title = 'Nos animations';    
@@ -123,6 +127,7 @@ switch ($action) {
 
 if (isset($action) && $action != 'event') {
     array_push($breadcrumb, ["Nos animations", "/evenement.php"]);
+    $meta_facebook = true;
 }
 $title .= ' - Restaurant le Timsam';
 

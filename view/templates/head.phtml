@@ -7,6 +7,16 @@
 	<meta name="keywords" content="restaurant, restaurant asiatique, restaurant vietnamiens, restaurant laotiens, salon de thé, restaurant thaïlandais,">
 	<meta name="description" content="Le Timsam est un restaurant de spécialités du Sud-Est asiatique proposant des plats issus de recettes traditionnelles faits maison à base de produits frais. Le restaurant vous proposes des spécialités laosiennes, vietnamiennes, thaïlandaises... Le restaurant est ouvert du mardi au samedi et propose de nombreux événéments culturels : expositions, dîner-concerts." />
 	<link rel="icon" type="image/jpg" href="/img/accueil/timsamFaviconl.jpg" />
+
+	<!-- Data Graph for articles -->
+	<?php if (isset($meta_facebook) && isset($og_url)) { ?>
+	<meta property="og:url" content="<?=$og_url?>" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="<?=$og_title?>" />
+	<meta property="og:description" content="<?=$og_description?>" />
+	<meta property="og:image" content="<?=$og_image?>" />
+	<?php } ?>
+
 	
 	<!-- Vendor CSS -->
 	<link rel="stylesheet" href="/css/vendor/normalize.css">
