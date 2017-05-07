@@ -18,8 +18,8 @@
 	<meta property="og:site_name" content="Restaurant le Timsam" />
     <meta property="og:locale" content="fr_FR" />
 
-	<!-- Data Graph for articles -->
 	<?php if (isset($meta_facebook) && isset($og_url)) { ?>
+	<!-- Data Graph for articles -->
 	<meta property="og:url" content="<?=$og_url?>" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="<?=$og_title?>" />
@@ -31,8 +31,13 @@
 		} else {
 		    $url_domain = "http://" . $_SERVER['HTTP_HOST'];
 		}
-		$current_uri = $url_domain . $_SERVER['REQUEST_URI'];
+		if(preg_match('/\?action/', $_SERVER['REQUEST_URI'])) {
+			$current_uri = $url_domain;
+		} else {
+			$current_uri = $url_domain . $_SERVER['REQUEST_URI'];
+		}
 	?>
+	<!-- Data Graph for pages -->
     <meta property="og:url" content="<?=$current_uri?>" />
 	<meta property="og:title" content="<?=$title?>" />
 	<meta property="og:description" content="Le Timsam est un restaurant de spécialités du Sud-Est asiatique proposant des plats issus de recettes traditionnelles faits maison à base de produits frais. Le restaurant vous proposes des spécialités laosiennes, vietnamiennes, thaïlandaises..." />

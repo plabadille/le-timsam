@@ -3,15 +3,23 @@ RewriteEngine On
 #REDIRECTION DES ANCIENNES PAGES
 RewriteCond %{QUERY_STRING} action=restaurant$
 RewriteRule ^index\.php$ /service.php? [L,R=301]
+RewriteCond %{QUERY_STRING} action=restaurant$
+RewriteRule ^$ /reservation.php? [L,R=301]
 
 RewriteCond %{QUERY_STRING} action=produits$
 RewriteRule ^index\.php$ /avis.php? [L,R=301]
+RewriteCond %{QUERY_STRING} action=produits$
+RewriteRule ^$ /reservation.php? [L,R=301]
 
 RewriteCond %{QUERY_STRING} action=event$
 RewriteRule ^index\.php$ /evenement.php? [L,R=301]
+RewriteCond %{QUERY_STRING} action=event$
+RewriteRule ^$ /reservation.php? [L,R=301]
 
 RewriteCond %{QUERY_STRING} action=carte$
 RewriteRule ^index\.php$ /reservation.php? [L,R=301]
+RewriteCond %{QUERY_STRING} action=carte$
+RewriteRule ^$ /reservation.php? [L,R=301]
 
 #REDIRECTION DES ANCIENS ARTICLES
 RewriteCond %{QUERY_STRING} action=article1$
