@@ -121,6 +121,15 @@ switch ($action) {
         $og_description = "Nous exposons en ce moment l'artiste Sista Jahia. Nous vous invitons à découvrir son travail très personnel, des tableaux aux influences très pop, colorés et géométriques ! Chaque tableau et uniques et a son histoire, il ne tient qu'à vous de venir les découvrir tout en mangeant votre plat favoris.";
         $og_image =  $url_domain . "/img/galerie/event/article/sista_jahia/1_mini.jpg";
         break;
+    case 'retour-soiree-a-la-table-du-chef-13':
+        $title = 'Retour sur la soirée à la table du chef (13ème édition)';    
+        $current_page = " Retour sur la soirée à la table du chef (13ème édition)";
+        $main = file_get_contents('view/pages/articles/23_soireeTableChefDebrief13.html');
+        $og_url = $url_domain . "/articles/" . $action;
+        $og_title = $title;
+        $og_description = "Retour sur la treizième édition de la soirée à la table du chef. Cette fois, le chef Som a décidé de vous proposer un menu de sa création que vous pourrez découvrir dans cet article !";
+        $og_image =  $url_domain . "/img/galerie/event/article/debrief_table_chef_13/4_mini.jpg";
+        break;
     default:
         $title = 'Nos animations';    
         $current_page = " Nos animations";
